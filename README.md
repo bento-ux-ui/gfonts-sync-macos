@@ -41,6 +41,9 @@ To remove the fonts:
 ```bash
 rm -rf ~/Library/Fonts/google-fonts
 ```
+## 🧠 Alternatives
+
+If you're looking for a more advanced or selective CLI tool, check out [fnt](https://github.com/alexmyczko/fnt) — a great solution for developers who prefer a leaner setup and full control over which fonts are installed.
 
 ## 🙌 Credits
 Made by the community — feel free to fork, improve, or contribute.
