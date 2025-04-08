@@ -5,6 +5,8 @@ Simple script to install and auto-update Google Fonts on macOS using Git and lau
 
 Easily install and keep Google Fonts updated on macOS — without needing any extra software.
 
+[📦 Download here](https://github.com/bentokill/gfonts-sync-macos/releases/download/v1.0.0/gfonts-sync-macos.zip)
+
 ## 🚀 Features
 - Installs all Google Fonts directly to your `~/Library/Fonts` folder
 - Automatically updates the font list **every week** via `launchd`
