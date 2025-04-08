@@ -1,11 +1,7 @@
-# gfonts-sync-macos
-Simple script to install and auto-update Google Fonts on macOS using Git and launchd — no Terminal required.
 
 # Google Fonts Auto Installer for macOS
 
 Easily install and keep Google Fonts updated on macOS — without needing any extra software.
-
-[📦 Download here](https://github.com/bentokill/gfonts-sync-macos/releases/download/v1.0.0/gfonts-sync-macos.zip)
 
 ## 🚀 Features
 - Installs all Google Fonts directly to your `~/Library/Fonts` folder
@@ -31,7 +27,15 @@ All fonts are stored in:
 ```
 
 ## 🧼 Uninstall
-If you want to stop automatic updates:
+
+You now have two `.command` scripts included for convenience — no Terminal required:
+
+- `disable-sync.command` — disables the automatic weekly update
+- `uninstall-google-fonts.command` — removes the fonts and disables the updater
+
+If you prefer doing it manually, here are the equivalent commands:
+
+To stop automatic updates:
 ```bash
 launchctl unload ~/Library/LaunchAgents/com.bento.googlefonts.update.plist
 rm ~/Library/LaunchAgents/com.bento.googlefonts.update.plist
@@ -41,6 +45,7 @@ To remove the fonts:
 ```bash
 rm -rf ~/Library/Fonts/google-fonts
 ```
+
 ## 🧠 Alternatives
 
 If you're looking for a more advanced or selective CLI tool, check out [fnt](https://github.com/alexmyczko/fnt) — a great solution for developers who prefer a leaner setup and full control over which fonts are installed.
