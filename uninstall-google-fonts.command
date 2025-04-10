@@ -7,6 +7,6 @@ launchctl unload ~/Library/LaunchAgents/com.bento.googlefonts.update.plist 2>/de
 rm -f ~/Library/LaunchAgents/com.bento.googlefonts.update.plist
 
 # Remove fonts folder
-rm -rf ~/Library/Fonts/google-fonts
+rm -rf ~/Documents/GoogleFontsRepo
 
 echo "✅ Google Fonts and auto-update have been removed from your system."

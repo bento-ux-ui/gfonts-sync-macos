@@ -1,39 +1,42 @@
 
-# Google Fonts Auto Installer for macOS
+# Google Fonts Installer for macOS (Non-Intrusive + Auto-Update)
 
-Easily install and keep Google Fonts updated on macOS — without needing any extra software.
+Easily download and keep Google Fonts updated on macOS — without activating them automatically and without needing Terminal.
 
 ## 🚀 Features
-- Installs all Google Fonts directly to your `~/Library/Fonts` folder
-- Automatically updates the font list **every week** via `launchd`
-- No Terminal interaction required (just double-click the script)
+- Clones the full Google Fonts repository into `~/Documents/GoogleFontsRepo`
+- Does **not activate** fonts — you stay in control
+- Automatically updates fonts every week via `launchd`
+- Requires no Terminal interaction — just double-click the `.command` script
+- Opens Font Book with a helpful message
 
 ## 📦 How to use
 
 1. Download and unzip the archive
-2. Double-click `install-google-fonts.command`
-3. It will:
-   - Clone the [Google Fonts GitHub repo](https://github.com/google/fonts) locally
-   - Add a background updater that pulls changes every 7 days
+2. Double-click `install-google-fonts-nonintrusive.command`
+3. The script will:
+   - Clone the [Google Fonts GitHub repo](https://github.com/google/fonts) into `~/Documents/GoogleFontsRepo`
+   - Set up an automatic background update every 7 days
+   - Open Font Book and prompt you to create a Library and import fonts manually
 
-## 🔧 Requirements
-- macOS 10.13 or newer
-- Git (installed by default on macOS)
+## 🔄 Fonts Location
 
-## 📁 Fonts location
-All fonts are stored in:
+All fonts are downloaded to:
+
 ```
-~/Library/Fonts/google-fonts
+~/Documents/GoogleFontsRepo
 ```
+
+You can browse and import only the fonts you want using Font Book or a font manager.
 
 ## 🧼 Uninstall
 
-You now have two `.command` scripts included for convenience — no Terminal required:
+Two `.command` scripts are also available for easy cleanup:
 
 - `disable-sync.command` — disables the automatic weekly update
-- `uninstall-google-fonts.command` — removes the fonts and disables the updater
+- `uninstall-google-fonts.command` — removes all downloaded fonts and disables the updater
 
-If you prefer doing it manually, here are the equivalent commands:
+### Manual Uninstall (if preferred)
 
 To stop automatic updates:
 ```bash
@@ -43,15 +46,14 @@ rm ~/Library/LaunchAgents/com.bento.googlefonts.update.plist
 
 To remove the fonts:
 ```bash
-rm -rf ~/Library/Fonts/google-fonts
+rm -rf ~/Documents/GoogleFontsRepo
 ```
 
 ## 🧠 Alternatives
 
-If you're looking for a more advanced or selective CLI tool, check out [fnt](https://github.com/alexmyczko/fnt) — a great solution for developers who prefer a leaner setup and full control over which fonts are installed.
-
-## 🙌 Credits
-Made by the community — feel free to fork, improve, or contribute.
+Looking for a leaner or more curated setup?  
+Check out [fnt](https://github.com/alexmyczko/fnt), a command-line tool to download only the fonts you want.
 
 ## 🪪 License
+
 This project is licensed under the [MIT License](LICENSE).
